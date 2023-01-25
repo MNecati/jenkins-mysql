@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH+EXTRA = "/usr/bin/mysql"
+    }
     stages {
         stage('Run MySQL Container') {
             steps {
