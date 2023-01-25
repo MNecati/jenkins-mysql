@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Connect to MySQL') {
             steps {
-                sh 'mysql -h127.0.0.1 -P3306 -u myuser -pmypassword < my-sql-data.sql'
+                sh 'PATH=$PATH:/usr/bin/mysql'
+                mysql command: '-h127.0.0.1 -P3306 -u myuser -pmypassword', script: 'my-sql-data.sql'
             }
         }
     }
