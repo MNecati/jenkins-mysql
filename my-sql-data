@@ -4,4 +4,4 @@ GRANT ALL PRIVILEGES ON mydb.* TO 'myuser'@'%';
 
 USE mydb;
 CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL);
-INSERT INTO users (name) VALUES ('John Doe');
+INSERT INTO users (name) VALUES ('Necati Tetik');
