@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Connect to MySQL') {
             steps {
-                sh '/usr/bin/mysql -h192.168.1.22 -P3306 -u myuser -pmypassword mydb < my-sql-data'
+                sh '/etc/mysql -h192.168.1.22 -P3306 -u myuser -pmypassword mydb < my-sql-data'
             }
         }
     }
