@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        PATH = "$PATH:/usr/bin"
-    }
     stages {
         stage('Run MySQL Container') {
             steps {
@@ -12,7 +9,7 @@ pipeline {
         }
         stage('Connect to MySQL') {
             steps {
-                sh '/usr/bin/mysql -h127.0.0.1 -P3306 -u myuser -pmypassword mydb < my-sql-data'
+                sh 'mysql -h127.0.0.1 -P3306 -u myuser -pmypassword < my-sql-data.sql'
             }
         }
     }
